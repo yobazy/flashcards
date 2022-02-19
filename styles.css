@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald&family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top:25px;
+    background-image: url("https://stepik.org/media/attachments/lesson/374893/world.png");
+    background-color: black;
+    filter:invert(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding-top:5%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
+.flexbox-container {
+    position: relative;
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 700px;
+    padding: 2%;
+}
+
+.flexbox-item {
+    background: beige;
+    border-radius: 10px;
+    margin: 10px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 23px;
+    width: 190px;
+    height: 190px;
+    transform-style: preserve-3d;
+    transition: all 0.7s linear;
+    z-index: 2;
+}
+
+.front, .back {
+    position: center;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 3;
+}
+
+.back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    color: white;
+}
+
+.flexbox-item:hover {
+    transform: rotateY(180deg);
+    background-color: orange;
+}
